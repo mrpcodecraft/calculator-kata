@@ -7,7 +7,7 @@ class Calculator {
 
     parseString(str: string): number[] {
         if (!str) return [0];
-        let values = str.split(',').map(v => parseInt(v) || 0);
+        let values = str.split(/[\n,]+/).map(v => parseInt(v) || 0);
         return values;
     }
 }
