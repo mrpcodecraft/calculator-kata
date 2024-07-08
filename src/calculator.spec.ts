@@ -15,4 +15,8 @@ describe("Test cases for calculator", () => {
     it("2) Test for string with single value", () => {
         expect(add("1")).to.equal(1);
     });
+    
+    it("3) Test for string with comma seperated multiple value", () => {
+        expect(add("1,2,3")).to.equal(6);
+    });
 })
