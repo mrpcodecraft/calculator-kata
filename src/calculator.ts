@@ -1,10 +1,14 @@
 class Calculator {
     add(str: string): number {
-        return this.parseString(str);
+        const values = this.parseString(str);
+        
+        return values.reduce((acc, val) => acc + val, 0);
     }
 
-    parseString(str: string): number {
-        return !str ? 0 : parseInt(str);
+    parseString(str: string): number[] {
+        if (!str) return [0];
+        let values = str.split(',').map(v => parseInt(v) || 0);
+        return values;
     }
 }
 
