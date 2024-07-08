@@ -11,4 +11,8 @@ describe("Test cases for calculator", () => {
     it("1) Test for empty string", () => {
         expect(add("")).to.equal(0);
     });
+
+    it("2) Test for string with single value", () => {
+        expect(add("1")).to.equal(1);
+    });
 })
