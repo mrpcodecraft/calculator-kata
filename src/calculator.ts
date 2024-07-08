@@ -1,6 +1,10 @@
 class Calculator {
     add(str: string): number {
-        return 0;
+        return this.parseString(str);
+    }
+
+    parseString(str: string): number {
+        return !str ? 0 : parseInt(str);
     }
 }
 
