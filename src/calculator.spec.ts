@@ -27,4 +27,9 @@ describe("Test cases for calculator", () => {
     it("5) Test for string with custom delimiter and next line tag seperated multiple value", () => {
         expect(add("//;\n1;2;5")).to.equal(8);
     });
+    
+    it("6) Test case for string with negative number", () => {
+        const err = new Error('negative numbers not allowed -5');
+        expect(add("//;\n1;2;-5")).to.throw(err);
+    });
 })
