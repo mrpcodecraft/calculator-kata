@@ -36,4 +36,12 @@ describe("Test cases for calculator", () => {
     it("7) Test case for string with multiple negative number", () => {
         expect(() => add("//;\n1;2;-5;-6")).to.throw(Error, 'Negative numbers not allowed -5, -6');
     });
+    
+    it("8) Test case for multi character with delimiter", () => {
+        expect(add("//[***]\n1,2***5***2")).to.equal(10);
+    });
+    
+    it("9) Test case for multiple multi character with delimiter", () => {
+        expect(add("//[***][---]\n1,2***5---2")).to.equal(10);
+    });
 })
