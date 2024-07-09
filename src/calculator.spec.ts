@@ -45,7 +45,7 @@ describe("Test cases for calculator", () => {
         expect(add("//[***][---]\n1,2***5---2")).to.equal(10);
     });
     
-    it("9) Test case to ignore values greater or equal to 1000", () => {
+    it("10) Test case to ignore values greater or equal to 1000", () => {
         expect(add("//[***][---]\n1,2***1000---1001")).to.equal(3);
     });
 })
