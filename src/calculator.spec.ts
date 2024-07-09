@@ -5,6 +5,7 @@ import Calculator from './calculator';
 describe("Test cases for calculator", () => {
     const add = (str: string): number => {
         const calculator = new Calculator();
+        
         return calculator.add(str);
     }
 
@@ -29,7 +30,6 @@ describe("Test cases for calculator", () => {
     });
     
     it("6) Test case for string with negative number", () => {
-        const err = new Error('negative numbers not allowed -5');
-        expect(add("//;\n1;2;-5")).to.throw(err);
+        expect(() => add("//;\n1;2;-5")).to.throw(Error, 'Negative numbers not allowed -5');
     });
 })
