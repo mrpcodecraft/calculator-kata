@@ -32,4 +32,8 @@ describe("Test cases for calculator", () => {
     it("6) Test case for string with negative number", () => {
         expect(() => add("//;\n1;2;-5")).to.throw(Error, 'Negative numbers not allowed -5');
     });
+    
+    it("7) Test case for string with multiple negative number", () => {
+        expect(() => add("//;\n1;2;-5;-6")).to.throw(Error, 'Negative numbers not allowed -5, -6');
+    });
 })
