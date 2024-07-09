@@ -44,7 +44,6 @@ class Calculator {
         delimiters = [
             ...delimiters,
             '\n',
-            ','
         ];
 
         return delimiters;
@@ -54,7 +53,7 @@ class Calculator {
     fetchFinalString(str: string, delimiters: string[]): string {
         let values: string[] = str.split('\n');
 
-        if (delimiters.length > 2) {
+        if (delimiters.length > 1) {
             values.shift();
         }
         
