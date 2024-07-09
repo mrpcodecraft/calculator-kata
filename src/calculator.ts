@@ -1,4 +1,5 @@
 class Calculator {
+    /* Function to add numbers from string */
     add(str: string): number {
         const values = this.parseString(str);
 
@@ -13,6 +14,7 @@ class Calculator {
         return sum;
     }
     
+    /* Function to parse string and return array of integer values */
     parseString(str: string): number[] {
         if (!str) return [0];
 
@@ -27,6 +29,7 @@ class Calculator {
         return values;
     }
 
+    /* Function to fetch delimiters in the string */
     fetchDelimiters(str: string): string[] {
         let delimiters: string[] = [];
         
@@ -47,6 +50,7 @@ class Calculator {
         return delimiters;
     }
 
+    /* Function to create final string for processing by removal of multiple delimiters */
     fetchFinalString(str: string, delimiters: string[]): string {
         let values: string[] = str.split('\n');
 
